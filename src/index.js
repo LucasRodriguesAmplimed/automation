@@ -35,3 +35,5 @@ const headers ={
 }
 
 console.log(`################$$$$$$$$$$$$$$$$ ${Authorization} $$$$$$$$$$$$$$$$$$$$$###################`)
+
+await browser.deleteSession();
