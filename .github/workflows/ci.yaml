@@ -1,22 +1,31 @@
 name: CI
-on: 
-    repository_dispatch:
-      types: [custom-event]
+
+on:
+  repository_dispatch:
+    types: [custom-event]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-        - name: Checkout
-          uses: actions/checkout@v4
-        - uses: actions/setup-node@v3
-          with:
-            node-version: 18
-        - name: Install
-          run: npm install
-        - name: Test
-          run: npm run start:dev
-        - uses: actions/upload-artifact@v1
-          if: failure()
-          with:
-            name: logs
-            path: logs
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install
+        run: npm install
+
+      - name: Set Payload Environment Variable
+        run: echo "::set-env name=INPUT_PAYLOAD::$(echo '${{ github.event.client_payload }}' | base64 -w 0)"
+
+      - name: Run Script
+        run: node your_script.js
+
+      - uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: logs
+          path: logs
