@@ -1,5 +1,7 @@
 name: CI
-on: [push, pull_request]
+on: 
+    repository_dispatch:
+      types: [custom-event]
 jobs:
   build:
     runs-on: ubuntu-latest
