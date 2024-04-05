@@ -1,0 +1,15 @@
+{
+  "name": "webdriver",
+  "type": "module",
+  "devDependencies": {
+    "@wdio/browser-runner": "^8.35.1",
+    "@wdio/cli": "^8.35.1",
+    "@wdio/mocha-framework": "^8.35.0",
+    "@wdio/spec-reporter": "^8.32.4",
+    "@wdio/visual-service": "^4.1.0"
+  },
+  "scripts": {
+    "wdio": "wdio run ./wdio.conf.js",
+    "start:dev": "node ./src/index.js"
+  }
+}
