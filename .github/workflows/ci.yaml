@@ -1,7 +1,8 @@
 name: CI
 
 on:
-  repository_dispatch:
+  
+  :
     types: [custom-event]
 
 jobs:
@@ -21,8 +22,8 @@ jobs:
       - name: Set Payload Environment Variable
         run: echo "::set-env name=INPUT_PAYLOAD::$(echo '${{ github.event.client_payload }}' | base64 -w 0)"
 
-      - name: Run Script
-        run: node your_script.js
+      - name: Teste
+        run:  npm run start:dev
 
       - uses: actions/upload-artifact@v1
         if: failure()
