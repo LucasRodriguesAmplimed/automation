@@ -21,7 +21,7 @@ jobs:
         run: npm install
 
       - name: Set Payload Environment Variable
-        run: echo "::set-env name=INPUT_PAYLOAD::$(echo '${{ github.event.JOB }}' | base64 -w 0)"
+        run: echo "::set-env name=JOB::$(echo '${{ github.event.client_payload }}' | base64 -w 0)"
 
       - name: Teste
         run:  npm run start:dev
