@@ -1,5 +1,5 @@
 
-import { browser } from '../.../../utils/utils.js'
+import { browser } from '../../utils/utils.js'
 import { pageIsComplete } from '../../utils/utils.js'
 import { job } from '../../utils/utils.js'
 import { setFieldValue } from '../../utils/utils.js'
@@ -20,7 +20,7 @@ export default class Login {
     };
 
      async executeLogin() {
-       await  this.initBrowser();
+       await this.initBrowser();
        await this.setDataLogin();
        console.log('$$$$$ Login realizado com sucesso! $$$$$');
     };
