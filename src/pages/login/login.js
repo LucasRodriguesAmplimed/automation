@@ -19,7 +19,7 @@ export default class Login {
         await pageIsComplete();
     };
 
-     async executeLogin() {
+     async initLogin() {
         console.log(job, job.url)
        await this.initBrowser();
        await this.setDataLogin();
