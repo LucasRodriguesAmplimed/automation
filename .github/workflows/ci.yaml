@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NODE_ENV: ${{env.CLIENT_PAYLOAD}}
+      JOB: ${{ github.event.client_payload.job }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
