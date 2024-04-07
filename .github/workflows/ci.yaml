@@ -1,4 +1,6 @@
 name: CI
+env:
+  JOB: ${{ github.event.client_payload }}
 on:
   repository_dispatch:
     types: [custom-event]
@@ -16,9 +18,6 @@ jobs:
 
       - name: Install
         run: npm install
-
-      - name: Set Payload Environment Variable
-        run: echo "::set-env name=JOB::$(echo '${{ github.event.client_payload }}' | base64 -w 0)"
 
       - name: Teste
         run:  npm run start:dev
