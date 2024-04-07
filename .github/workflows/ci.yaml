@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      JOB: ${{ github.event.client_payload.job }}
+      PAYLOAD_CLIENT: ${{ toJson(github.event.client_payload) }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
