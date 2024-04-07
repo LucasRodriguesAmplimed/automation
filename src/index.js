@@ -34,6 +34,6 @@ const headers ={
     Authorization: `Bearer ${Authorization}`
 }
 
-console.log(`################$$$$$$$$$$$$$$$$ ${process.env.JOB} $$$$$$$$$$$$$$$$$$$$$###################`)
+console.log(`################$$$$$$$$$$$$$$$$ ${process.env.PAYLOAD_CLIENT} $$$$$$$$$$$$$$$$$$$$$###################`)
 
 await browser.deleteSession();
