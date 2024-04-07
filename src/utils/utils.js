@@ -27,6 +27,6 @@ export const setFieldValue = async (field, value) => {
 }
 
 export const clickElement = async (element) => {
-    await element.waitForDisplayed();
+    await element.waitForDisplayed({ timeout: 60000});
     await element.click()
 }
