@@ -1,9 +1,9 @@
 
-import { browser } from './utils/utils.js'
-import { pageIsComplete } from './utils/utils.js'
-import { job } from './utils/utils.js'
-import { setFieldValue } from './utils/utils.js'
-import { clickElement } from './utils/utils.js'
+import { browser } from '../.../../utils/utils.js'
+import { pageIsComplete } from '../../utils/utils.js'
+import { job } from '../../utils/utils.js'
+import { setFieldValue } from '../../utils/utils.js'
+import { clickElement } from '../../utils/utils.js'
 
 export default class Login {
 
