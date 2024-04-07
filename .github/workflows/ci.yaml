@@ -23,8 +23,3 @@ jobs:
       - name: Teste
         run:  npm run start:dev
 
-      - uses: actions/upload-artifact@v1
-        if: failure()
-        with:
-          name: logs
-          path: logs
