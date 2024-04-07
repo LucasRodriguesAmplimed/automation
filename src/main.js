@@ -1,4 +1,4 @@
-import StartJob from './main.js';
+import StartJob from './index.js';
 
 const runJob = async () => {
     const job = new StartJob();
