@@ -10,6 +10,6 @@
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.js",
-    "start:dev": "node ./src/index.js"
+    "start:dev": "node ./src/main.js"
   }
 }
