@@ -1,8 +1,14 @@
+import 'dotenv/config'
 import StartJob from './index.js';
-
+import { deleteSession } from './utils/utils.js';
 const runJob = async () => {
-    const job = new StartJob();
-    await job.exec();
+    try {
+        const job = new StartJob();
+        await job.exec();
+    } catch (error) {
+        await deleteSession();
+        throw new Error(error);
+    }
 }
 
 await runJob();
