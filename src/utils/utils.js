@@ -18,7 +18,7 @@ export const pageIsComplete = async () => {
 
 export const deleteSession = async () => await browser.deleteSession()
 
-export const job = process.env.PAYLOAD_CLIENT
+export const job = JSON.parse(process.env.PAYLOAD_CLIENT)
 
 export const setFieldValue = async (field, value) => {
     const element = await browser.$(field)
