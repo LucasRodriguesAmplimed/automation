@@ -20,6 +20,7 @@ export default class Login {
     };
 
      async executeLogin() {
+        console.log(job)
        await this.initBrowser();
        await this.setDataLogin();
        console.log('$$$$$ Login realizado com sucesso! $$$$$');
