@@ -9,7 +9,7 @@ const runJob = async () => {
     } catch (error) {
         await deleteSession();
         throw new Error(error);
-    }
-}
+    };
+};
 
 await runJob();
