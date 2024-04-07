@@ -1,6 +1,4 @@
 name: CI
-env:
-    JOB: ${{ github.event.client_payload }}
 on:
   repository_dispatch:
     types: [custom-event]
