@@ -1,7 +1,4 @@
 name: CI
-env:
-  owner: LucasRodriguesAmplimed
-  repo: automation
 on:
   repository_dispatch:
     types: [custom-event]
